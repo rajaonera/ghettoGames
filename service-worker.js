@@ -1,7 +1,7 @@
 const CACHE_NAME = 'stats-joueurs-cache-v1';
 const urlsToCache = [
   '/',
-  '/compteur_parties_perdues2.0.html',
+  '/index.html',
   '/style.css',
   '/script.js',
   '/manifest.json',
