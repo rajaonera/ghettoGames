@@ -1,0 +1,185 @@
+ body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 4em; 
+  color: #370;
+  margin-top: 20px;
+}
+
+.search-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  width: 100%;
+  padding: 0 15px;
+}
+
+input {
+  padding: 12px;
+  margin-bottom: 15px;
+  font-size: 1.3em;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+}
+.game-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.game-card, .player-card {
+  background-color: #ffffff;
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  text-align: center; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-card:hover, .player-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.game-card h2, .player-card p {
+  color: #333;
+  margin-bottom: 12px;
+  font-size: 1.1em;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 12px;
+  margin: 5px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s;
+  width: auto;
+  min-width: 90px;
+  flex: 1;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button:active {
+  background-color: #388e3c;
+}
+
+button:focus {
+  outline: none;
+}
+
+.remove-button {
+  background-color: #e57373;
+}
+
+.remove-button:hover {
+  background-color: #f44336;
+}
+
+#statsContainer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin: 20px 8;
+}
+
+.stat-card{
+  background-color: #f1f1f1;
+  padding: 12px 12px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  min-width: 130px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+.stat-card strong{
+  color: #4CAF50;
+}
+
+.player-details {
+  visibility: hidden;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  margin-top: 5px;
+  font-size: 0.9em;
+  color: #555;
+}
+
+.player-card.open .player-details {
+  visibility: visible;
+  max-height: 1000px; /* ou une hauteur suffisante */
+}
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.player-summary{
+  /* font-weight: bold; */
+  font-size: 1.2em;
+  cursor: pointer;
+}
+@media (max-width: 600px) {
+  body {
+    padding: 0 10px;
+  }
+
+  h1 {
+    font-size: 1.6em;
+  }
+
+  .game-card, .player-card {
+    width: 80%;
+    padding: 15px;
+  }
+
+  .search-container input {
+    padding: 12px;
+    font-size: 1.1em;
+  }
+
+  button { 
+    padding: 15px;
+    font-size: 1.3em;
+  }
+
+  .game-card h2, .player-card p {
+    font-size: 1.1em; 
+ 
+  }
+  .game-card button {
+      font-size: 1.8em;     
+  }
+
+  .game-card, .player-card {
+    margin-bottom: 15px;
+  }
+  
+}
