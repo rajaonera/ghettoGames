@@ -24,8 +24,19 @@
     <input type="file" id="importFile" style="display: none;"
     onchange="importGames(event)">
   </div>
-  <button onclick="document.getElementById('importFile').click()">importer</button>
-  <button onclick="exportGames()">exporter</button>
+<button id="toggleSidebarBtn">☰</button>
+
+<div class="sidebar" id="sidebar">
+  <div class="params-btn">
+    <br>
+    <br>
+    <br>
+    <button onclick="document.getElementById('importFile').click()">Importer</button>
+    <button onclick="exportGames()">Exporter</button>
+    <button id="toggleMode">🌙</button>
+  </div>
+</div>
+
 </div>
 
   <div id="gamesContainer" style="display: inline;"></div>
@@ -37,6 +48,14 @@
         .then(reg => console.log('Service worker registered ✅'))
         .catch(err => console.error('Service worker registration failed ❌', err));
     }
+    const sidebar = document.getElementById('sidebar');
+    const toggleBtn = document.getElementById('toggleSidebarBtn');
+  
+    toggleBtn.addEventListener('click', () => {
+      sidebar.classList.toggle('open');
+      document.body.classList.toggle('with-sidebar');
+      toggleBtn.textContent = sidebar.classList.contains('open') ? '❌' : '☰';
+    });
   </script>
   
 </body>

@@ -36,7 +36,21 @@ function loadGames() {
   updateStatistics();
 
   }
-
+  document.addEventListener('DOMContentLoaded', () => {
+    const modeBtn = document.getElementById('toggleMode');
+    
+    modeBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+  
+      // Optionnel : changer l'icône
+      if (document.body.classList.contains('dark-mode')) {
+        modeBtn.textContent = '☀️';
+      } else {
+        modeBtn.textContent = '🌙';
+      }
+    });
+  });
+  
   function addPlayer(gameIndex) {
     const playerName = prompt("Nom du joueur ?");
     if (!playerName) {
