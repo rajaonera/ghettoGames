@@ -21,6 +21,13 @@ h1 {
   width: 100%;
   padding: 0 15px;
 }
+.add-gameContainer{
+  display: flex;
+}
+.add-gameContainer input {
+  margin: auto;
+  width:80% ;
+}
 
 input {
   padding: 12px;
@@ -29,6 +36,7 @@ input {
   border-radius: 8px;
   border: 1px solid #ccc;
   width: 100%;
+  font-size: 1.8em;
   box-sizing: border-box;
 }
 .game-card{
@@ -49,6 +57,7 @@ input {
   align-items: center; 
   text-align: center; 
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-size: 1.3em;
 }
 
 .game-card:hover, .player-card:hover {
@@ -59,7 +68,8 @@ input {
 .game-card h2, .player-card p {
   color: #333;
   margin-bottom: 12px;
-  font-size: 1.1em;
+  font-size: 2.5em;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 button {
@@ -70,7 +80,7 @@ button {
   margin: 5px;
   border-radius: 6px;
   cursor: pointer;
-  font-size: 1em;
+  font-size: 1.5em;
   transition: background-color 0.3s;
   width: auto;
   min-width: 90px;
@@ -225,39 +235,61 @@ button:focus {
   cursor: pointer;
 }
 @media (max-width: 600px) {
-  body {
-    padding: 0 10px;
-  }
-
   h1 {
-    font-size: 1.6em;
+    font-size: 4em;
+    margin-top: 10px;
   }
 
-  .game-card, .player-card {
-    width: 80%;
-    padding: 15px;
+  .search-container {
+    padding: 0 10px;
+    font-size: 18px;
   }
-
-  .search-container input {
-    padding: 12px;
-    font-size: 1.1em;
-  }
-
-  button { 
-    padding: 15px;
-    font-size: 1.3em;
-  }
-
-  .game-card h2, .player-card p {
-    font-size: 1.1em; 
- 
-  }
-  .game-card button {
-      font-size: 1.8em;     
-  }
-
-  .game-card, .player-card {
+  .gameContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 15px;
   }
   
+  .gameContainer input {
+    margin:auto ;
+  }
+  
+  input {
+    font-size: 1em;
+    padding: 10px;
+  }
+
+  .game-card, .player-card {
+    width: 93%;
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+  .player-card{
+    width: 93%;
+  }
+  .game-card h2, .player-card p {
+    font-size: 1em;
+  }
+  input{
+    font-size: 1.2em;
+    padding: 8px;
+    min-width: 80px;
+  }
+
+  button {
+    font-size: 1.7em;
+    padding: 8px;
+    min-width: 80px;
+  }
+
+  .stat-card {
+    font-size: 20px;
+    min-width: 100px;
+    padding: 10px;
+  }
+
+  .player-summary {
+    font-size: 1em;
+  }
 }
